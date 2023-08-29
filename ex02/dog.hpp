@@ -6,7 +6,7 @@
 /*   By: rrhnizar <rrhnizar@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/29 10:45:18 by rrhnizar          #+#    #+#             */
-/*   Updated: 2023/08/29 17:12:27 by rrhnizar         ###   ########.fr       */
+/*   Updated: 2023/08/29 18:37:00 by rrhnizar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@
 #include "animal.hpp"
 #include "Brain.hpp"
 
-class Dog : public Animal
+class Dog : public AAnimal
 {
     private:
         Brain* brain;

@@ -6,26 +6,26 @@
 /*   By: rrhnizar <rrhnizar@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/29 11:21:21 by rrhnizar          #+#    #+#             */
-/*   Updated: 2023/08/29 17:14:45 by rrhnizar         ###   ########.fr       */
+/*   Updated: 2023/08/29 18:37:04 by rrhnizar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "dog.hpp"
 
-Dog::Dog() : Animal()
+Dog::Dog() : AAnimal()
 {
     std::cout << "Dog : default constractor called" << std::endl;
     type = "def_dog";
     brain = new Brain();
 }
 
-Dog::Dog(std::string typee) : Animal(typee)
+Dog::Dog(std::string typee) : AAnimal(typee)
 {
     std::cout << "Dog : constractor called" << std::endl;
     brain = new Brain();
 }
 
-Dog::Dog(const Dog& other_Dog) : Animal(other_Dog)
+Dog::Dog(const Dog& other_Dog) : AAnimal(other_Dog)
 {
     std::cout << "Dog : copy constractor called" << std::endl;
     *this = other_Dog;

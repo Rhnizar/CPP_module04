@@ -6,26 +6,26 @@
 /*   By: rrhnizar <rrhnizar@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/29 11:23:34 by rrhnizar          #+#    #+#             */
-/*   Updated: 2023/08/29 17:14:15 by rrhnizar         ###   ########.fr       */
+/*   Updated: 2023/08/29 18:20:20 by rrhnizar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "cat.hpp"
 
-Cat::Cat() : Animal()
+Cat::Cat() : AAnimal()
 {
     std::cout << "Cat : default constractor called" << std::endl;
     type = "def_cat";
     brain = new Brain();
 }
 
-Cat::Cat(std::string typee) : Animal(typee)
+Cat::Cat(std::string typee) : AAnimal(typee)
 {
     std::cout << "Cat : constractor called" << std::endl;
     brain = new Brain();
 }
 
-Cat::Cat(const Cat& other_Cat) : Animal(other_Cat)
+Cat::Cat(const Cat& other_Cat) : AAnimal(other_Cat)
 {
     std::cout << "Cat : copy constractor called" << std::endl;
     *this = other_Cat;

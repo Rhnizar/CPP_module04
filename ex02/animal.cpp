@@ -6,32 +6,32 @@
 /*   By: rrhnizar <rrhnizar@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/29 10:52:52 by rrhnizar          #+#    #+#             */
-/*   Updated: 2023/08/29 13:22:10 by rrhnizar         ###   ########.fr       */
+/*   Updated: 2023/08/29 18:35:30 by rrhnizar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "animal.hpp"
 
-Animal::Animal() : type("default")
+AAnimal::AAnimal() : type("default")
 {
-    std::cout << "Animal : default constractor called" << std::endl;
+    std::cout << "AbstractBase : default constractor called" << std::endl;
 }
 
-Animal::Animal(std::string typee)
+AAnimal::AAnimal(std::string typee)
 {
-    std::cout << "Animal : constractor called" << std::endl;
+    std::cout << "AbstractBase : constractor called" << std::endl;
     type = typee;
 }
 
-Animal::Animal(const Animal &other_animal)
+AAnimal::AAnimal(const AAnimal &other_animal)
 {
-    std::cout << "Animal : copy constractor called" << std::endl;
+    std::cout << "AbstractBase : copy constractor called" << std::endl;
     *this = other_animal;
 }
 
-Animal& Animal::operator=(const Animal &other_animal)
+AAnimal& AAnimal::operator=(const AAnimal &other_animal)
 {
-    std::cout << "Animal : copy assignement operator overloading called" << std::endl;
+    std::cout << "AbstractBase : copy assignement operator overloading called" << std::endl;
     if (this != &other_animal)
     {
        type = other_animal.type;
@@ -39,17 +39,17 @@ Animal& Animal::operator=(const Animal &other_animal)
     return *this;
 }
 
-Animal::~Animal()
+AAnimal::~AAnimal()
 {
-    std::cout << "Animal : destractor called " << std::endl;
+    std::cout << "AbstractBase : destractor called " << std::endl;
 }
 
-std::string Animal::getType() const
+std::string AAnimal::getType() const
 {
     return type;
 }
 
-void    Animal::setType(std::string typee)
+void    AAnimal::setType(std::string typee)
 {
     type = typee;
 }
@@ -57,7 +57,7 @@ void    Animal::setType(std::string typee)
 
 /*function to implement */
 
-void    Animal::makeSound() const
-{
-       std::cout << " Sound the animals. " << std::endl; 
-}
+// void    AAnimal::makeSound() const
+// {
+//        std::cout << " Sound the animals. " << std::endl; 
+// }

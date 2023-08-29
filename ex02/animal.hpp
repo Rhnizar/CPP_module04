@@ -6,7 +6,7 @@
 /*   By: rrhnizar <rrhnizar@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/29 10:37:14 by rrhnizar          #+#    #+#             */
-/*   Updated: 2023/08/29 16:42:25 by rrhnizar         ###   ########.fr       */
+/*   Updated: 2023/08/29 18:23:34 by rrhnizar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,21 +15,21 @@
 
 #include <iostream>
 
-class Animal
+class AAnimal
 {
     protected:
         std::string type;
     public:
-        Animal();//default constractor
-        Animal(std::string typee);// normal constractor
-        Animal(const Animal &other_animal);//copy constractor
-        Animal& operator=(const Animal &other_animal);//copy assignement operator overloading
-        virtual ~Animal();
+        AAnimal();//default constractor
+        AAnimal(std::string typee);// normal constractor
+        AAnimal(const AAnimal &other_animal);//copy constractor
+        AAnimal& operator=(const AAnimal &other_animal);//copy assignement operator overloading
+        virtual ~AAnimal();
         
         std::string getType() const;
         void    setType(std::string typee);
         
-        virtual void    makeSound() const;
+        virtual void    makeSound() const = 0;
 };
 
 #endif
