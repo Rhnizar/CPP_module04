@@ -6,7 +6,7 @@
 /*   By: rrhnizar <rrhnizar@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/29 11:21:21 by rrhnizar          #+#    #+#             */
-/*   Updated: 2023/08/29 12:40:33 by rrhnizar         ###   ########.fr       */
+/*   Updated: 2023/08/29 13:45:42 by rrhnizar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,7 +56,7 @@ void    Dog::setType(std::string typee)
 
 /*function to implement */
 
-void    Dog::makeSound()
+void    Dog::makeSound() const
 {
-       std::cout << "Haaw Haaw " << std::endl; 
+       std::cout << "Haaw Haaw " << std::endl;
 }

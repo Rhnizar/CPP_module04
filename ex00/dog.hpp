@@ -6,7 +6,7 @@
 /*   By: rrhnizar <rrhnizar@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/29 10:45:18 by rrhnizar          #+#    #+#             */
-/*   Updated: 2023/08/29 12:42:00 by rrhnizar         ###   ########.fr       */
+/*   Updated: 2023/08/29 13:45:47 by rrhnizar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,6 +27,6 @@ class Dog : public Animal
         std::string getType() const;
         void    setType(std::string typee);
 
-        void    makeSound();
+        void    makeSound() const;
 };
 #endif
