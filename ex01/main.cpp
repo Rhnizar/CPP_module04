@@ -6,7 +6,7 @@
 /*   By: rrhnizar <rrhnizar@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/29 10:35:22 by rrhnizar          #+#    #+#             */
-/*   Updated: 2023/08/29 16:37:58 by rrhnizar         ###   ########.fr       */
+/*   Updated: 2023/08/29 13:48:13 by rrhnizar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,9 +24,5 @@ int main()
     i->makeSound(); //will output the cat sound!
     j->makeSound();
     meta->makeSound();
-    
-    delete meta;
-    delete j;
-    delete i;
     return 0;
 }

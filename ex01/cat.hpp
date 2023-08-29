@@ -1,35 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   animal.hpp                                         :+:      :+:    :+:   */
+/*   cat.hpp                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rrhnizar <rrhnizar@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/08/29 10:37:14 by rrhnizar          #+#    #+#             */
-/*   Updated: 2023/08/29 16:40:47 by rrhnizar         ###   ########.fr       */
+/*   Created: 2023/08/29 10:46:45 by rrhnizar          #+#    #+#             */
+/*   Updated: 2023/08/29 13:53:41 by rrhnizar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef ANIMAL_HPP
-#define ANIMAL_HPP
+#ifndef CAT_HPP
+#define CAT_HPP
 
-#include <iostream>
+#include "animal.hpp"
 
-class Animal
+class Cat : public Animal
 {
-    protected:
-        std::string type;
     public:
-        Animal();//default constractor
-        Animal(std::string typee);// normal constractor
-        Animal(const Animal &other_animal);//copy constractor
-        Animal& operator=(const Animal &other_animal);//copy assignement operator overloading
-        virtual ~Animal();
+        Cat();//default constractor
+        Cat(std::string typee);// normal constractor
+        Cat(const Cat& other_Cat);//copy constractor
+        Cat& operator=(const Cat& other_Cat);//copy assignement operator overloading
+        ~Cat();
         
         std::string getType() const;
         void    setType(std::string typee);
-        
-        virtual void    makeSound() const;
+
+        void    makeSound() const;
 };
 
 #endif
