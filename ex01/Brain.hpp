@@ -6,7 +6,7 @@
 /*   By: rrhnizar <rrhnizar@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/29 16:35:24 by rrhnizar          #+#    #+#             */
-/*   Updated: 2023/08/29 16:49:11 by rrhnizar         ###   ########.fr       */
+/*   Updated: 2023/09/03 10:50:34 by rrhnizar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,6 @@ class Brain
         Brain(Brain& other_Brain);//copy constractor
         Brain& operator=(Brain& other_Brain);//copy assignement operator overloading
         ~Brain();
-        
 };
 
 #endif

@@ -6,14 +6,14 @@
 #    By: rrhnizar <rrhnizar@student.1337.ma>        +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/08/29 10:34:32 by rrhnizar          #+#    #+#              #
-#    Updated: 2023/08/29 13:29:40 by rrhnizar         ###   ########.fr        #
+#    Updated: 2023/09/03 10:43:54 by rrhnizar         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 
 Name = exec
 
-SRC = main.cpp animal.cpp dog.cpp cat.cpp
+SRC = main.cpp animal.cpp dog.cpp cat.cpp WrongAnimal.cpp WrongCat.cpp
 
 OBJ = $(SRC:.cpp=.o)
 
