@@ -6,13 +6,15 @@
 #    By: rrhnizar <rrhnizar@student.1337.ma>        +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/08/29 18:43:48 by rrhnizar          #+#    #+#              #
-#    Updated: 2023/08/29 18:44:28 by rrhnizar         ###   ########.fr        #
+#    Updated: 2023/09/03 18:02:19 by rrhnizar         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 Name = exec
 
-SRC = main.cpp 
+SRC = main.cpp AMateria.cpp Cure.cpp Ice.cpp Character.cpp
+
+# SRC = main.cpp Character.cpp
 
 OBJ = $(SRC:.cpp=.o)
 

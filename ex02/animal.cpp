@@ -6,7 +6,7 @@
 /*   By: rrhnizar <rrhnizar@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/29 10:52:52 by rrhnizar          #+#    #+#             */
-/*   Updated: 2023/09/03 13:23:53 by rrhnizar         ###   ########.fr       */
+/*   Updated: 2023/09/03 13:41:52 by rrhnizar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,4 +53,6 @@ void    AAnimal::setType(std::string typee)
 {
     type = typee;
 }
+
+
 
