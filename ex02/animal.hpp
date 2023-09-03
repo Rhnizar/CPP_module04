@@ -6,7 +6,7 @@
 /*   By: rrhnizar <rrhnizar@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/29 10:37:14 by rrhnizar          #+#    #+#             */
-/*   Updated: 2023/08/29 18:23:34 by rrhnizar         ###   ########.fr       */
+/*   Updated: 2023/09/03 13:13:53 by rrhnizar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,8 +22,8 @@ class AAnimal
     public:
         AAnimal();//default constractor
         AAnimal(std::string typee);// normal constractor
-        AAnimal(const AAnimal &other_animal);//copy constractor
-        AAnimal& operator=(const AAnimal &other_animal);//copy assignement operator overloading
+        AAnimal(const AAnimal &other_Aanimal);//copy constractor
+        AAnimal& operator=(const AAnimal &other_Aanimal);//copy assignement operator overloading
         virtual ~AAnimal();
         
         std::string getType() const;

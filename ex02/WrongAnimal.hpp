@@ -1,35 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   dog.hpp                                            :+:      :+:    :+:   */
+/*   WrongAnimal.hpp                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rrhnizar <rrhnizar@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/08/29 10:45:18 by rrhnizar          #+#    #+#             */
-/*   Updated: 2023/09/03 13:12:07 by rrhnizar         ###   ########.fr       */
+/*   Created: 2023/09/03 10:35:31 by rrhnizar          #+#    #+#             */
+/*   Updated: 2023/09/03 10:45:53 by rrhnizar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef DOG_HPP
-#define DOG_HPP
+#ifndef WRONGANIMAL_HPP
+#define WRONGANIMAL_HPP
 
-#include "animal.hpp"
-#include "Brain.hpp"
+#include <iostream>
 
-class Dog : public AAnimal
+class WrongAnimal
 {
-    private:
-        Brain   *brain;
+    protected:
+        std::string type;
     public:
-        Dog();//default constractor
-        Dog(std::string typee);// normal constractor
-        Dog(const Dog &other_Dog);//copy constractor
-        Dog& operator=(const Dog& other_Dog);//copy assignement operator overloading
-        ~Dog();
-    
+        WrongAnimal();//default constractor
+        WrongAnimal(std::string typee);// normal constractor
+        WrongAnimal(const WrongAnimal &other_animal);//copy constractor
+        WrongAnimal& operator=(const WrongAnimal &other_animal);//copy assignement operator overloading
+        virtual ~WrongAnimal();
+        
         std::string getType() const;
         void    setType(std::string typee);
-
+        
         void    makeSound() const;
 };
+
 #endif

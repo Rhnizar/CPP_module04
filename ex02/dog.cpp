@@ -6,7 +6,7 @@
 /*   By: rrhnizar <rrhnizar@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/29 11:21:21 by rrhnizar          #+#    #+#             */
-/*   Updated: 2023/08/29 18:37:04 by rrhnizar         ###   ########.fr       */
+/*   Updated: 2023/09/03 13:22:45 by rrhnizar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,6 +29,7 @@ Dog::Dog(const Dog& other_Dog) : AAnimal(other_Dog)
 {
     std::cout << "Dog : copy constractor called" << std::endl;
     *this = other_Dog;
+    
 }
 
 Dog& Dog::operator=(const Dog& other_Dog)
@@ -37,6 +38,8 @@ Dog& Dog::operator=(const Dog& other_Dog)
     if (this != &other_Dog)
     {
        type = other_Dog.type;
+       /*brain = other_Dog.brain; ===> shallow copy*/
+       brain = new Brain(*other_Dog.brain); // deep copy
     }
     return *this;
 }
@@ -44,7 +47,7 @@ Dog& Dog::operator=(const Dog& other_Dog)
 Dog::~Dog()
 {
     std::cout << "Dog : destractor called " << std::endl;
-    delete  brain;
+    delete brain;
 }
 
 std::string Dog::getType() const
@@ -59,7 +62,7 @@ void    Dog::setType(std::string typee)
 
 /*function to implement */
 
-void    Dog::makeSound() const
-{
-       std::cout << "Haaw Haaw " << std::endl;
-}
+// void    Dog::makeSound() const
+// {
+//        std::cout << "Haaw Haaw " << std::endl;
+// }

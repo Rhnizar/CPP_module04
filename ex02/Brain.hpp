@@ -6,7 +6,7 @@
 /*   By: rrhnizar <rrhnizar@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/29 16:35:24 by rrhnizar          #+#    #+#             */
-/*   Updated: 2023/08/29 16:49:11 by rrhnizar         ###   ########.fr       */
+/*   Updated: 2023/09/03 11:41:53 by rrhnizar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,6 +25,15 @@ class Brain
         Brain& operator=(Brain& other_Brain);//copy assignement operator overloading
         ~Brain();
         
+        // std::string getIdeas(int index) const
+        // {
+        //     for (int i=0; i<100; i++)
+        //     {
+        //         if (index == i && index < 100)
+        //             return ideas[i];
+        //     }
+        //     return "default";
+        // }
 };
 
 #endif

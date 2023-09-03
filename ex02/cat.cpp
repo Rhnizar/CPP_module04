@@ -6,7 +6,7 @@
 /*   By: rrhnizar <rrhnizar@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/29 11:23:34 by rrhnizar          #+#    #+#             */
-/*   Updated: 2023/08/29 18:20:20 by rrhnizar         ###   ########.fr       */
+/*   Updated: 2023/09/03 13:12:47 by rrhnizar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,6 +37,8 @@ Cat& Cat::operator=(const Cat& other_Cat)
     if (this != &other_Cat)
     {
        type = other_Cat.type;
+    /*brain = other_Cat.brain; ===> shallow copy */
+       brain = new Brain(*other_Cat.brain); // deep copy
     }
     return *this;
 }
@@ -44,7 +46,7 @@ Cat& Cat::operator=(const Cat& other_Cat)
 Cat::~Cat()
 {
     std::cout << "Cat : destractor called " << std::endl;
-    delete  brain;
+    delete brain;
 }
 
 std::string Cat::getType() const
