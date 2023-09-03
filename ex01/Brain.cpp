@@ -6,7 +6,7 @@
 /*   By: rrhnizar <rrhnizar@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/29 16:35:02 by rrhnizar          #+#    #+#             */
-/*   Updated: 2023/08/29 17:01:47 by rrhnizar         ###   ########.fr       */
+/*   Updated: 2023/09/03 11:17:40 by rrhnizar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,8 @@
 Brain::Brain()
 {
     std::cout << "Brain : default constractor called" << std::endl;
+    for (int i=0; i<100; i++)
+        ideas[i] = "default_ideas";
 }
 
 Brain::Brain(Brain& other_Brain)

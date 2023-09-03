@@ -6,7 +6,7 @@
 /*   By: rrhnizar <rrhnizar@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/29 10:46:45 by rrhnizar          #+#    #+#             */
-/*   Updated: 2023/08/29 17:12:20 by rrhnizar         ###   ########.fr       */
+/*   Updated: 2023/09/03 11:05:59 by rrhnizar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@
 class Cat : public Animal
 {
     private:
-        Brain*  brain;
+        Brain   *brain;
     public:
         Cat();//default constractor
         Cat(std::string typee);// normal constractor

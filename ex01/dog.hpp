@@ -6,7 +6,7 @@
 /*   By: rrhnizar <rrhnizar@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/29 10:45:18 by rrhnizar          #+#    #+#             */
-/*   Updated: 2023/08/29 17:12:27 by rrhnizar         ###   ########.fr       */
+/*   Updated: 2023/09/03 10:56:49 by rrhnizar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@
 class Dog : public Animal
 {
     private:
-        Brain* brain;
+        Brain   *brain;
     public:
         Dog();//default constractor
         Dog(std::string typee);// normal constractor
