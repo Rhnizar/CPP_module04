@@ -6,7 +6,7 @@
 /*   By: rrhnizar <rrhnizar@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/03 13:52:16 by rrhnizar          #+#    #+#             */
-/*   Updated: 2023/09/04 16:31:08 by rrhnizar         ###   ########.fr       */
+/*   Updated: 2023/09/04 22:50:47 by rrhnizar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,7 +33,7 @@ Character::Character(const Character& other_character)
 
 Character& Character::operator=(const Character& other_character)
 {
-	std::cout << "ICharacter: copy constractor called " << std::endl;
+	std::cout << "ICharacter: copy assignement operator overloading called  " << std::endl;
 	if (this != &other_character)
 	{
 		this->Name = other_character.Name;
@@ -57,16 +57,41 @@ std::string const &  Character::getName() const
 
 void Character::equip(AMateria* m)
 {
-	(void)m;
+	int i;
+
+	for(i=0; i<4; i++)
+	{
+		if (inventory[i] == NULL)
+		{
+			inventory[i] = m;
+			break;
+		}
+	}
+	if (i == 4)
+		std::cout << "array the inventory is full " << std::endl;
 }
 
 void Character::unequip(int idx)
 {
-	(void)idx;
+	// int i;
+
+	// for(i=0; i<4; i++)
+	// {
+	// 	if (inventory[i] == NULL)
+	// 		break;
+	// }
+	// if (i != 4)
+	// 	std::cout << "array the inventory is not full " << std::endl;
+	// else
+	// 	inventory[idx] = NULL;
+	if (idx < 4 && inventory[idx])
+	{
+		inventory[idx] = NULL;
+	}
 }
 
 void Character::use(int idx, ICharacter& target)
 {
-	(void)idx;
-	(void)target;
+	if (inventory[idx] != NULL)
+		inventory[idx]->use(target);
 }

@@ -6,7 +6,7 @@
 /*   By: rrhnizar <rrhnizar@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/03 13:49:27 by rrhnizar          #+#    #+#             */
-/*   Updated: 2023/09/04 16:30:50 by rrhnizar         ###   ########.fr       */
+/*   Updated: 2023/09/04 22:51:24 by rrhnizar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,5 +33,13 @@ class Character : public ICharacter
 	void unequip(int idx);
 	void use(int idx, ICharacter& target);
 };
+
+
+
+typedef struct s_character
+{
+	AMateria* hold_ptr;
+	struct s_character *Next;
+}	t_character;
 
 #endif
