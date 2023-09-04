@@ -6,7 +6,7 @@
 /*   By: rrhnizar <rrhnizar@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/29 19:50:43 by rrhnizar          #+#    #+#             */
-/*   Updated: 2023/09/03 18:41:27 by rrhnizar         ###   ########.fr       */
+/*   Updated: 2023/09/04 16:45:52 by rrhnizar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,6 +24,7 @@ class Cure : public AMateria
 		~Cure();//destractor
 
 		AMateria* clone() const;
+		void use(ICharacter& target);
 		
 };
 

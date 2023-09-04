@@ -6,7 +6,7 @@
 /*   By: rrhnizar <rrhnizar@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/29 19:51:54 by rrhnizar          #+#    #+#             */
-/*   Updated: 2023/09/03 18:41:44 by rrhnizar         ###   ########.fr       */
+/*   Updated: 2023/09/04 16:55:56 by rrhnizar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 Cure::Cure() : AMateria()
 {
-	std::cout << "Cure: default constractor called";
+	std::cout << "Cure: default constractor called" << std::endl;;
 	type = "cure";
 }
 
@@ -45,4 +45,9 @@ AMateria* Cure::clone() const
 {
 	Cure *c = new Cure();
 	return c;
+}
+
+void	Cure::use(ICharacter& target)
+{
+	(void)target;
 }

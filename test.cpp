@@ -1,30 +1,41 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   MateriaSource.hpp                                  :+:      :+:    :+:   */
+/*   test.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rrhnizar <rrhnizar@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/09/03 15:47:41 by rrhnizar          #+#    #+#             */
-/*   Updated: 2023/09/04 13:46:15 by rrhnizar         ###   ########.fr       */
+/*   Created: 2023/09/04 12:01:39 by rrhnizar          #+#    #+#             */
+/*   Updated: 2023/09/04 12:21:18 by rrhnizar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef MATERIASOURCE_HPP
-#define MATERIASOURCE_HPP
 
-#include "AMateria.hpp"
+#include <iostream>
 
-class MateriaSource
+class Base
 {
-	public:
-	MateriaSource();
-	MateriaSource(const MateriaSource& other_MateriaSource);
-	MateriaSource& operator=(const MateriaSource& other_MateriaSource);
-	~MateriaSource();
-
-	void learnMateria(AMateria*);
-	AMateria* createMateria(std::string const & type);
+	public :
+		virtual void rr() = 0;
 };
 
-#endif
+class Derive:public Base
+{
+	public:
+		Derive(){}
+	void rr();
+};
+
+void Derive::rr()
+{
+	std::cout << "rrrr\n";
+}
+
+int main()
+{
+
+	Base *b = new Derive;
+	b->rr();
+	std::cout << "test " << std::endl;
+	return 0;
+}

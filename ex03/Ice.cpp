@@ -6,7 +6,7 @@
 /*   By: rrhnizar <rrhnizar@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/29 19:51:37 by rrhnizar          #+#    #+#             */
-/*   Updated: 2023/09/03 18:43:36 by rrhnizar         ###   ########.fr       */
+/*   Updated: 2023/09/04 17:11:08 by rrhnizar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,8 @@
 
 Ice::Ice()
 {
-	std::cout << "Ice: default constractor called";
-	type ="ice";
+	std::cout << "Ice: default constractor called" << std::endl;
+	type = "ice";
 }
 
 Ice::Ice(const Ice& other_Ice)
@@ -46,4 +46,9 @@ AMateria* Ice::clone() const
 {
 	Ice *i = new Ice();
 	return i;
+}
+
+void	Ice::use(ICharacter& target)
+{
+	(void)target;
 }

@@ -6,7 +6,7 @@
 /*   By: rrhnizar <rrhnizar@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/29 19:14:35 by rrhnizar          #+#    #+#             */
-/*   Updated: 2023/09/03 18:45:48 by rrhnizar         ###   ########.fr       */
+/*   Updated: 2023/09/04 16:37:49 by rrhnizar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,5 +53,4 @@ std::string const & AMateria::getType() const
 void AMateria::use(ICharacter& target)
 {
 	(void)target;
-	std::cout << "test\n";
 }

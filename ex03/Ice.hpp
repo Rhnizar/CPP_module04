@@ -6,7 +6,7 @@
 /*   By: rrhnizar <rrhnizar@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/29 19:45:42 by rrhnizar          #+#    #+#             */
-/*   Updated: 2023/09/03 18:42:01 by rrhnizar         ###   ########.fr       */
+/*   Updated: 2023/09/04 16:50:36 by rrhnizar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,6 +24,7 @@ class Ice : public AMateria
 		~Ice();//destractor
 
 		AMateria* clone() const;
+		void use(ICharacter& target);
 };
 
 #endif

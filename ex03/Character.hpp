@@ -6,32 +6,32 @@
 /*   By: rrhnizar <rrhnizar@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/03 13:49:27 by rrhnizar          #+#    #+#             */
-/*   Updated: 2023/09/03 18:36:36 by rrhnizar         ###   ########.fr       */
+/*   Updated: 2023/09/04 16:30:50 by rrhnizar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef CHARACTER_HPP
 #define CHARACTER_HPP
 
-// #include "AMateria.hpp"
-#include <iostream>
+#include "ICharacter.hpp"
+#include "AMateria.hpp"
 
-class AMateria;
-class ICharacter
+class Character : public ICharacter
 {
 	private:
-		std::string Name;
+		std::string	Name;
+		AMateria* inventory[4];
 	public:
-	ICharacter();//default constractor
-	ICharacter(std::string name);//constractor with parameters
-	ICharacter(const ICharacter& other_Icharacter);//copy constractor
-	ICharacter& operator=(const ICharacter& other_Icharacter);//copy assignement operator overloading 
-	
-	virtual ~ICharacter();
-	virtual std::string const & getName() const = 0;
-	virtual void equip(AMateria* m) = 0;
-	virtual void unequip(int idx) = 0;
-	virtual void use(int idx, ICharacter& target) = 0;
+	Character();//default constractor
+	Character(std::string name);//constractor with parameters
+	Character(const Character& other_character);//copy constractor
+	Character& operator=(const Character& other_character);//copy assignement operator overloading 
+	~Character();
+
+	std::string const & getName() const;
+	void equip(AMateria* m);
+	void unequip(int idx);
+	void use(int idx, ICharacter& target);
 };
 
 #endif
