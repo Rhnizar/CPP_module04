@@ -6,7 +6,7 @@
 /*   By: rrhnizar <rrhnizar@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/29 18:44:53 by rrhnizar          #+#    #+#             */
-/*   Updated: 2023/09/05 14:29:56 by rrhnizar         ###   ########.fr       */
+/*   Updated: 2023/09/05 16:42:09 by rrhnizar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,11 +23,10 @@ int main()
     AMateria *r2 = new Cure;
     ICharacter *ic = new Character("Reda");
 
-    // std::cout << r->getType() << std::endl;
     r->use(*ic);
     r2->use(*ic);
+    ic->equip(r2);
 
-    // ic->deleteMateriaPointers(ic->getMaterias());
     delete r;
     delete r2;
     return 0;

@@ -6,7 +6,7 @@
 /*   By: rrhnizar <rrhnizar@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/03 13:52:16 by rrhnizar          #+#    #+#             */
-/*   Updated: 2023/09/05 14:30:20 by rrhnizar         ###   ########.fr       */
+/*   Updated: 2023/09/05 16:40:51 by rrhnizar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,11 +51,12 @@ Character& Character::operator=(const Character& other_character)
 Character::~Character()
 {
 	std::cout << "Character: destractor called " << std::endl;
+	deleteMateriaPointers(materias);
 }
 
 /* use linkedlist to hold pointers*/
 
-void	Character::holdMateriaPointers(t_materia **list_ma, AMateria* mp)
+void	holdMateriaPointers(t_materia **list_ma, AMateria* mp)
 {
 	t_materia	*newMateria;
 	t_materia	*tmp;
@@ -75,7 +76,8 @@ void	Character::holdMateriaPointers(t_materia **list_ma, AMateria* mp)
 		tmp = tmp->Next;
 	tmp->Next = newMateria;
 }
-void	Character::deleteMateriaPointers(t_materia *list_ma)
+
+void	deleteMateriaPointers(t_materia *list_ma)
 {
 	t_materia *tmp_list;
 
@@ -88,10 +90,6 @@ void	Character::deleteMateriaPointers(t_materia *list_ma)
 	}
 }
 
-// t_materia*	Character::getMaterias() const
-// {
-// 	return materias;
-// }
 /*implement pure virtual functions */
 
 std::string const &  Character::getName() const
@@ -117,17 +115,6 @@ void Character::equip(AMateria* m)
 
 void Character::unequip(int idx)
 {
-	// int i;
-
-	// for(i=0; i<4; i++)
-	// {
-	// 	if (inventory[i] == NULL)
-	// 		break;
-	// }
-	// if (i != 4)
-	// 	std::cout << "array the inventory is not full " << std::endl;
-	// else
-	// 	inventory[idx] = NULL;
 	if (idx < 4 && inventory[idx])
 	{
 		holdMateriaPointers(&materias, inventory[idx]);

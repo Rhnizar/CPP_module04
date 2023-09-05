@@ -6,7 +6,7 @@
 /*   By: rrhnizar <rrhnizar@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/03 13:49:27 by rrhnizar          #+#    #+#             */
-/*   Updated: 2023/09/05 14:29:40 by rrhnizar         ###   ########.fr       */
+/*   Updated: 2023/09/05 16:41:31 by rrhnizar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,26 +39,11 @@ class Character : public ICharacter
 	void equip(AMateria* m);
 	void unequip(int idx);
 	void use(int idx, ICharacter& target);
-
-	void holdMateriaPointers(t_materia **list_ma, AMateria* mp);
-	void deleteMateriaPointers(t_materia *list_ma);
-	// t_materia*	getMaterias() const;
 };
 
-// class	Node
-// {
-// 	public:
-// 		AMateria*	ptr_hold;
-// 		Node*		Next;
-// };
-// class	LinkedList
-// {
-// 	private:
-// 		Node*	head;
-// 	public:
-// 		void insertNode(AMateria*);
-// 		void deleteNode(AMateria*);
-// };
+void holdMateriaPointers(t_materia **list_ma, AMateria* mp);
+void deleteMateriaPointers(t_materia *list_ma);
+
 
 
 
