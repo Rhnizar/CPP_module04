@@ -6,19 +6,19 @@
 /*   By: rrhnizar <rrhnizar@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/29 19:51:37 by rrhnizar          #+#    #+#             */
-/*   Updated: 2023/09/04 19:20:59 by rrhnizar         ###   ########.fr       */
+/*   Updated: 2023/09/05 13:27:59 by rrhnizar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Ice.hpp"
 
-Ice::Ice()
+Ice::Ice() : AMateria()
 {
 	std::cout << "Ice: default constractor called" << std::endl;
 	type = "ice";
 }
 
-Ice::Ice(const Ice& other_Ice)
+Ice::Ice(const Ice& other_Ice) : AMateria(other_Ice)
 {
 	std::cout << "Ice: copy constractot called" << std::endl;
 	*this = other_Ice;

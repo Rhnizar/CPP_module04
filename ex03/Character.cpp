@@ -6,7 +6,7 @@
 /*   By: rrhnizar <rrhnizar@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/03 13:52:16 by rrhnizar          #+#    #+#             */
-/*   Updated: 2023/09/04 22:50:47 by rrhnizar         ###   ########.fr       */
+/*   Updated: 2023/09/05 14:30:20 by rrhnizar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,12 +17,17 @@ Character::Character()
 	std::cout << "Character: default constractor called " << std::endl;
 	for(int i=0; i<4; i++)
 		inventory[i] = NULL;
+	Name = "def_name";
+	materias = NULL;
 }
 
 Character::Character(std::string name)
 {
 	std::cout << "Character: constractor with parameters called " << std::endl;
 	Name = name;
+	for(int i=0; i<4; i++)
+		inventory[i] = NULL;
+	materias = NULL;
 }
 
 Character::Character(const Character& other_character)
@@ -48,6 +53,45 @@ Character::~Character()
 	std::cout << "Character: destractor called " << std::endl;
 }
 
+/* use linkedlist to hold pointers*/
+
+void	Character::holdMateriaPointers(t_materia **list_ma, AMateria* mp)
+{
+	t_materia	*newMateria;
+	t_materia	*tmp;
+
+	newMateria = new t_materia;
+	if (!newMateria)
+		return;
+	newMateria->hold_ptr = mp;
+	newMateria->Next = NULL;
+	if (*list_ma == NULL)
+	{
+		*list_ma = newMateria;
+		return ;
+	}
+	tmp = *list_ma;
+	while (tmp->Next)
+		tmp = tmp->Next;
+	tmp->Next = newMateria;
+}
+void	Character::deleteMateriaPointers(t_materia *list_ma)
+{
+	t_materia *tmp_list;
+
+	while (list_ma)
+	{
+		tmp_list = list_ma;
+		list_ma = list_ma->Next;
+		delete tmp_list->hold_ptr;
+		delete tmp_list;
+	}
+}
+
+// t_materia*	Character::getMaterias() const
+// {
+// 	return materias;
+// }
 /*implement pure virtual functions */
 
 std::string const &  Character::getName() const
@@ -86,6 +130,7 @@ void Character::unequip(int idx)
 	// 	inventory[idx] = NULL;
 	if (idx < 4 && inventory[idx])
 	{
+		holdMateriaPointers(&materias, inventory[idx]);
 		inventory[idx] = NULL;
 	}
 }

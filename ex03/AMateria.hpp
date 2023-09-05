@@ -6,7 +6,7 @@
 /*   By: rrhnizar <rrhnizar@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/29 18:49:23 by rrhnizar          #+#    #+#             */
-/*   Updated: 2023/09/04 20:05:58 by rrhnizar         ###   ########.fr       */
+/*   Updated: 2023/09/05 13:26:36 by rrhnizar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,8 +25,8 @@ class AMateria
     public:
         AMateria();//default constractor
         AMateria(std::string const & type);// normal constractor
-        AMateria(AMateria& other_amateria);// copy constractor
-        AMateria& operator=(AMateria& other_amateria);//copy assignement operator overloading
+        AMateria(const AMateria& other_amateria);// copy constractor
+        AMateria& operator=(const AMateria& other_amateria);//copy assignement operator overloading
         virtual ~AMateria();//destractor
         
         

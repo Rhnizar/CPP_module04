@@ -6,7 +6,7 @@
 /*   By: rrhnizar <rrhnizar@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/29 19:14:35 by rrhnizar          #+#    #+#             */
-/*   Updated: 2023/09/04 16:37:49 by rrhnizar         ###   ########.fr       */
+/*   Updated: 2023/09/05 13:27:00 by rrhnizar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,13 +23,13 @@ AMateria::AMateria(std::string const & type)
 	this->type = type;
 }
 
-AMateria::AMateria(AMateria& other_amateria)
+AMateria::AMateria(const AMateria& other_amateria)
 {
 	std::cout << "AMateria: copy constractor called " << std::endl;
 	*this = other_amateria;
 }
 
-AMateria& AMateria::operator=(AMateria& other_amateria)
+AMateria& AMateria::operator=(const AMateria& other_amateria)
 {
 	std::cout << "AMateria: copy assignement operator overloading called " << std::endl;
 	if (this != &other_amateria)

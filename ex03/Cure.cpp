@@ -6,7 +6,7 @@
 /*   By: rrhnizar <rrhnizar@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/29 19:51:54 by rrhnizar          #+#    #+#             */
-/*   Updated: 2023/09/04 19:20:53 by rrhnizar         ###   ########.fr       */
+/*   Updated: 2023/09/05 13:25:02 by rrhnizar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ Cure::Cure() : AMateria()
 	type = "cure";
 }
 
-Cure::Cure(const Cure& other_Cure)
+Cure::Cure(const Cure& other_Cure) : AMateria(other_Cure)
 {
 	std::cout << "Cure: copy constractot called" << std::endl;
 	*this = other_Cure;

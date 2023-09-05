@@ -6,7 +6,7 @@
 /*   By: rrhnizar <rrhnizar@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/29 18:44:53 by rrhnizar          #+#    #+#             */
-/*   Updated: 2023/09/04 19:20:13 by rrhnizar         ###   ########.fr       */
+/*   Updated: 2023/09/05 14:29:56 by rrhnizar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,6 +26,8 @@ int main()
     // std::cout << r->getType() << std::endl;
     r->use(*ic);
     r2->use(*ic);
+
+    // ic->deleteMateriaPointers(ic->getMaterias());
     delete r;
     delete r2;
     return 0;
