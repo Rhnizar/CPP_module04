@@ -6,7 +6,7 @@
 /*   By: rrhnizar <rrhnizar@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/03 13:52:16 by rrhnizar          #+#    #+#             */
-/*   Updated: 2023/09/06 15:48:08 by rrhnizar         ###   ########.fr       */
+/*   Updated: 2023/09/06 23:30:15 by rrhnizar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,6 +33,8 @@ Character::Character(std::string name)
 Character::Character(const Character& other_character)
 {
 	std::cout << "ICharacter: copy constractor called " << std::endl;
+	for (int i=0; i<4; i++)
+		this->inventory[i] = NULL;
 	*this = other_character;
 }
 
@@ -43,7 +45,18 @@ Character& Character::operator=(const Character& other_character)
 	{
 		this->Name = other_character.Name;
 		for (int i=0; i<4; i++)
-			this->inventory[i] = other_character.inventory[i];
+		{
+			if (this->inventory[i])
+			{
+				delete this->inventory[i];
+				this->inventory[i] = NULL;
+			}
+		}
+		for (int i=0; i<4; i++)
+		{
+			if (other_character.inventory[i])
+				this->inventory[i] = other_character.inventory[i]->clone();
+		}
 		this->materias = other_character.materias;
 	}
 	return *this;
@@ -53,6 +66,11 @@ Character::~Character()
 {
 	std::cout << "Character: destractor called " << std::endl;
 	deleteMateriaPointers(materias);
+	for (int i=0; i<4; i++)
+	{
+		if (inventory[i])
+			delete inventory[i];
+	}
 }
 
 /* use linkedlist to hold pointers*/
@@ -108,7 +126,7 @@ void Character::equip(AMateria* m)
 		{
 			inventory[i] = m;
 			break;
-		}	
+		}
 	}
 	if (i == 4)
 	{

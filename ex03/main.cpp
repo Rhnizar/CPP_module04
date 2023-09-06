@@ -6,7 +6,7 @@
 /*   By: rrhnizar <rrhnizar@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/29 18:44:53 by rrhnizar          #+#    #+#             */
-/*   Updated: 2023/09/06 15:49:23 by rrhnizar         ###   ########.fr       */
+/*   Updated: 2023/09/06 23:29:25 by rrhnizar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,27 +17,103 @@
 
 int rr()
 {
-    // AMateria *r = new Ice;
-    // AMateria *r2 = new Cure;
-    ICharacter *ic = new Character("Reda");
-
-    // r->use(*ic);
-    // r2->use(*ic);
-    // ic->equip(r2);
-
-    // delete r;
-    // delete r2;
-
-    // Character c("rr");
-    // Character r(c);
+    // // // ICharacter *ic = new Character("Reda");
 
 
-    for(long i=0; i<100000000000000; i++)
-    {
-        ic->equip(new Ice());
-        ic->unequip(0);
-        ic->equip(new Ice());
-    }
+    // // // Character c("rr");
+    // // // Character r(c);
+
+
+    // // // for(long i=0; i<100000000000000; i++)
+    // // // {
+    // // //     ic->equip(new Ice());
+    // // //     ic->unequip(0);
+    // // //     ic->equip(new Ice());
+    // // // }
+
+    // // // AMateria *a = new Cure();
+    // // // Character c1;
+    // // // Character c2;
+    // // // c2.equip(a);
+    // // // c1.equip(a);
+    // // // c2=c1;
+    
+    // // // delete (a);
+
+    // // Character a("a");
+        
+    // //     a.equip(new Cure());
+    // //     // a.equip(new Ice());
+    // //     // a.equip(new Cure());
+    // //     // a.equip(new Ice());
+        
+    // //     // a.use(0, a);
+    // //     // a.use(1, a);
+    // //     // a.use(2, a);
+    // //     // a.use(3, a);
+        
+    // //     Character b("b");
+    // //     // b.equip(new Cure());
+    // //     // b.equip(new Ice());
+
+    // //     a = b;
+
+    // //     // b.use(0, b);
+    // //     // b.use(1, b);
+
+    // //     // Character a("a");
+    // //     // a.equip(new Cure());
+    // //     // a.equip(new Ice());
+    // //     // a.equip(new Cure());
+    // //     // a.equip(new Ice());
+        
+    // //     // a.use(0, a);
+    // //     // a.use(1, a);
+    // //     // a.use(2, a);
+    // //     // a.use(3, a);
+        
+    // //     // Character b("b");
+
+    // //     // b = a;
+
+    // //     // b.use(0, b);
+    // //     // b.use(1, b);
+    // //     // b.use(2, b);
+    // //     // b.use(3, b);
+    
+    //     Character a("a");
+    //     a.equip(new Ice());
+    //     a.equip(new Ice());
+    //     a.equip(new Ice());
+    //     a.equip(new Ice());
+    //     a.equip(new Ice());
+    //     Character b;
+    //     Character c;
+
+    //     b = a;
+    //     c = a;
+    //     // a.equip(new Cure());
+    //     // a.equip(new Ice());
+    //     // a.equip(new Cure());
+    //     // a.equip(new Ice());
+    //     // a.equip(new Ice());
+        
+    //     // a.use(0, a);
+    //     // a.use(1, a);
+    //     // a.use(2, a);
+    //     // a.use(3, a);
+        
+    //     // Character b("b");
+    //     // b.equip(new Cure());
+    //     // b.equip(new Ice());
+
+    //     // a = b;
+
+    //     // b.use(0, b);
+    //     // b.use(1, b);
+
+    Character a("ggg");
+    Character b(a);
     
     return 0;
 }
