@@ -6,7 +6,7 @@
 /*   By: rrhnizar <rrhnizar@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/03 13:52:16 by rrhnizar          #+#    #+#             */
-/*   Updated: 2023/09/06 12:24:13 by rrhnizar         ###   ########.fr       */
+/*   Updated: 2023/09/06 15:48:08 by rrhnizar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,6 +44,7 @@ Character& Character::operator=(const Character& other_character)
 		this->Name = other_character.Name;
 		for (int i=0; i<4; i++)
 			this->inventory[i] = other_character.inventory[i];
+		this->materias = other_character.materias;
 	}
 	return *this;
 }
@@ -81,12 +82,8 @@ void	deleteMateriaPointers(t_materia *list_ma)
 {
 	t_materia *tmp_list;
 
-	// std::cout << list_ma;
-	// exit(1);
-
 	while (list_ma)
 	{
-		// printf("here\n");
 		tmp_list = list_ma;
 		list_ma = list_ma->Next;
 		delete tmp_list->hold_ptr;
@@ -111,10 +108,13 @@ void Character::equip(AMateria* m)
 		{
 			inventory[i] = m;
 			break;
-		}
+		}	
 	}
 	if (i == 4)
+	{
 		std::cout << "array the inventory is full " << std::endl;
+		delete m;
+	}
 }
 
 void Character::unequip(int idx)
