@@ -6,7 +6,7 @@
 /*   By: rrhnizar <rrhnizar@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/03 13:52:16 by rrhnizar          #+#    #+#             */
-/*   Updated: 2023/09/05 18:28:47 by rrhnizar         ###   ########.fr       */
+/*   Updated: 2023/09/06 12:24:13 by rrhnizar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -81,12 +81,12 @@ void	deleteMateriaPointers(t_materia *list_ma)
 {
 	t_materia *tmp_list;
 
-	std::cout << list_ma;
-	exit(1);
+	// std::cout << list_ma;
+	// exit(1);
 
 	while (list_ma)
 	{
-		printf("here\n");
+		// printf("here\n");
 		tmp_list = list_ma;
 		list_ma = list_ma->Next;
 		delete tmp_list->hold_ptr;
