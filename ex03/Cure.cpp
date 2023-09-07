@@ -6,7 +6,7 @@
 /*   By: rrhnizar <rrhnizar@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/29 19:51:54 by rrhnizar          #+#    #+#             */
-/*   Updated: 2023/09/05 13:25:02 by rrhnizar         ###   ########.fr       */
+/*   Updated: 2023/09/06 23:34:30 by rrhnizar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,7 @@ Cure& Cure::operator=(const Cure& other_Cure)
 	std::cout << "Cure: copy assignement operator overloading called" << std::endl;
 	if (this != &other_Cure)
 	{
-		this->type = other_Cure.type;
+		
 	}
 	return *this;
 }

@@ -6,7 +6,7 @@
 /*   By: rrhnizar <rrhnizar@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/29 19:51:37 by rrhnizar          #+#    #+#             */
-/*   Updated: 2023/09/05 13:27:59 by rrhnizar         ###   ########.fr       */
+/*   Updated: 2023/09/06 23:35:38 by rrhnizar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,7 +38,6 @@ Ice::~Ice()
 {
 	std::cout << "Ice: destractor called" << std::endl;
 }
-
 
 /*function to implement */
 
