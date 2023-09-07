@@ -6,7 +6,7 @@
 /*   By: rrhnizar <rrhnizar@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/29 11:23:34 by rrhnizar          #+#    #+#             */
-/*   Updated: 2023/09/03 13:12:47 by rrhnizar         ###   ########.fr       */
+/*   Updated: 2023/09/07 08:49:31 by rrhnizar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,17 +49,12 @@ Cat::~Cat()
     delete brain;
 }
 
+/*function to implement */
+
 std::string Cat::getType() const
 {
     return type;
 }
-
-void    Cat::setType(std::string typee)
-{
-    type = typee;
-}
-
-/*function to implement */
 
 void    Cat::makeSound() const
 {

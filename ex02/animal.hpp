@@ -6,7 +6,7 @@
 /*   By: rrhnizar <rrhnizar@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/29 10:37:14 by rrhnizar          #+#    #+#             */
-/*   Updated: 2023/09/03 13:13:53 by rrhnizar         ###   ########.fr       */
+/*   Updated: 2023/09/07 08:48:19 by rrhnizar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,9 +26,7 @@ class AAnimal
         AAnimal& operator=(const AAnimal &other_Aanimal);//copy assignement operator overloading
         virtual ~AAnimal();
         
-        std::string getType() const;
-        void    setType(std::string typee);
-        
+        virtual std::string getType() const = 0;
         virtual void    makeSound() const = 0;
 };
 

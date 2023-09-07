@@ -6,7 +6,7 @@
 /*   By: rrhnizar <rrhnizar@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/03 10:41:11 by rrhnizar          #+#    #+#             */
-/*   Updated: 2023/09/03 10:43:01 by rrhnizar         ###   ########.fr       */
+/*   Updated: 2023/09/07 08:51:49 by rrhnizar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,17 +44,12 @@ WrongCat::~WrongCat()
     std::cout << "WrongCat : destractor called " << std::endl;
 }
 
+/*function to implement */
+
 std::string WrongCat::getType() const
 {
     return type;
 }
-
-void    WrongCat::setType(std::string typee)
-{
-    type = typee;
-}
-
-/*function to implement */
 
 void    WrongCat::makeSound() const
 {

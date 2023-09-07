@@ -6,7 +6,7 @@
 /*   By: rrhnizar <rrhnizar@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/29 10:46:45 by rrhnizar          #+#    #+#             */
-/*   Updated: 2023/09/03 13:12:02 by rrhnizar         ###   ########.fr       */
+/*   Updated: 2023/09/07 08:49:23 by rrhnizar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,8 +28,6 @@ class Cat : public AAnimal
         ~Cat();
         
         std::string getType() const;
-        void    setType(std::string typee);
-
         void    makeSound() const;
 };
 
