@@ -6,13 +6,13 @@
 /*   By: rrhnizar <rrhnizar@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/29 10:52:52 by rrhnizar          #+#    #+#             */
-/*   Updated: 2023/09/03 10:39:14 by rrhnizar         ###   ########.fr       */
+/*   Updated: 2023/09/07 07:00:39 by rrhnizar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "animal.hpp"
 
-Animal::Animal() : type("default")
+Animal::Animal() : type("default_animal")
 {
     std::cout << "Animal : default constractor called" << std::endl;
 }

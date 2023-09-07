@@ -6,7 +6,7 @@
 /*   By: rrhnizar <rrhnizar@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/29 11:21:21 by rrhnizar          #+#    #+#             */
-/*   Updated: 2023/08/29 13:45:42 by rrhnizar         ###   ########.fr       */
+/*   Updated: 2023/09/07 06:58:55 by rrhnizar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 Dog::Dog() : Animal()
 {
     std::cout << "Dog : default constractor called" << std::endl;
-    type = "def_dog";
+    type = "Dog";
 }
 
 Dog::Dog(std::string typee) : Animal(typee)

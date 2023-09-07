@@ -6,7 +6,7 @@
 /*   By: rrhnizar <rrhnizar@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/29 11:23:34 by rrhnizar          #+#    #+#             */
-/*   Updated: 2023/08/29 13:55:11 by rrhnizar         ###   ########.fr       */
+/*   Updated: 2023/09/07 06:59:21 by rrhnizar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 Cat::Cat() : Animal()
 {
     std::cout << "Cat : default constractor called" << std::endl;
-    type = "def_cat";
+    type = "Cat";
 }
 
 Cat::Cat(std::string typee) : Animal(typee)
