@@ -6,7 +6,7 @@
 /*   By: rrhnizar <rrhnizar@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/29 10:45:18 by rrhnizar          #+#    #+#             */
-/*   Updated: 2023/09/03 10:56:49 by rrhnizar         ###   ########.fr       */
+/*   Updated: 2023/09/07 07:14:01 by rrhnizar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ class Dog : public Animal
         Dog(std::string typee);// normal constractor
         Dog(const Dog &other_Dog);//copy constractor
         Dog& operator=(const Dog& other_Dog);//copy assignement operator overloading
-        ~Dog();
+        ~Dog();//destracter
     
         std::string getType() const;
         void    setType(std::string typee);

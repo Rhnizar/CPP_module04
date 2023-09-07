@@ -6,7 +6,7 @@
 /*   By: rrhnizar <rrhnizar@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/29 10:35:22 by rrhnizar          #+#    #+#             */
-/*   Updated: 2023/09/06 15:40:40 by rrhnizar         ###   ########.fr       */
+/*   Updated: 2023/09/07 08:19:32 by rrhnizar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,28 +18,25 @@
 
 int main()
 {
-    // const Animal* j = new Dog();
-    // const Animal* i = new Cat();
-    
-    // delete j;//should not create a leak
-    // delete i;
-    
+    /*test the  copy assignement operator overloading*/
+    /*Cat *animal = new Cat();
+    Cat *animal2 = new Cat();
 
-    /*test the constractor the class Brain */
-    // const Brain brain;
-    // std::cout << brain.getIdeas(1) << std::endl;
-
-    /*test the shallow copy and deep copy */
-    // Dog j;
-    // Dog Dog2(j);
-
-    Dog *animal = new Dog();
-    Dog *animal2 = new Dog(*animal);
-
+    *animal2 = *animal;
     
     delete animal2;
-    delete animal;
+    delete animal;*/
 
-    while(1);
+    /* test the create and fill an array of Animal objects. */
+    Animal *array[4];
+    for(int i=0; i<4; i++)
+    {
+        if (i < 2)
+            array[i] = new Cat();
+        else
+            array[i] = new Dog();
+    }
+    for(int i=0; i<4; i++)
+        delete array[i];
     return 0;
 }

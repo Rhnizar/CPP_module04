@@ -6,7 +6,7 @@
 /*   By: rrhnizar <rrhnizar@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/29 11:23:34 by rrhnizar          #+#    #+#             */
-/*   Updated: 2023/09/03 11:14:16 by rrhnizar         ###   ########.fr       */
+/*   Updated: 2023/09/07 08:10:38 by rrhnizar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 Cat::Cat() : Animal()
 {
     std::cout << "Cat : default constractor called" << std::endl;
-    type = "def_cat";
+    type = "Cat";
     brain = new Brain();
 }
 
@@ -38,7 +38,8 @@ Cat& Cat::operator=(const Cat& other_Cat)
     {
        type = other_Cat.type;
     /*brain = other_Cat.brain; ===> shallow copy */
-       brain = new Brain(*other_Cat.brain); // deep copy
+        delete this->brain;
+        brain = new Brain(*other_Cat.brain); /* ==> deep copy */
     }
     return *this;
 }

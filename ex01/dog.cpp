@@ -6,7 +6,7 @@
 /*   By: rrhnizar <rrhnizar@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/29 11:21:21 by rrhnizar          #+#    #+#             */
-/*   Updated: 2023/09/03 11:39:18 by rrhnizar         ###   ########.fr       */
+/*   Updated: 2023/09/07 08:02:52 by rrhnizar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 Dog::Dog() : Animal()
 {
     std::cout << "Dog : default constractor called" << std::endl;
-    type = "def_dog";
+    type = "Dog";
     brain = new Brain();
 }
 
@@ -39,7 +39,8 @@ Dog& Dog::operator=(const Dog& other_Dog)
     {
        type = other_Dog.type;
        /*brain = other_Dog.brain; ===> shallow copy*/
-       brain = new Brain(*other_Dog.brain); // deep copy
+       delete this->brain;
+       brain = new Brain(*other_Dog.brain); /* ===> deep copy */
     }
     return *this;
 }
