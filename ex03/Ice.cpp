@@ -6,7 +6,7 @@
 /*   By: rrhnizar <rrhnizar@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/29 19:51:37 by rrhnizar          #+#    #+#             */
-/*   Updated: 2023/09/07 01:31:41 by rrhnizar         ###   ########.fr       */
+/*   Updated: 2023/09/07 10:00:06 by rrhnizar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,7 @@ Ice& Ice::operator=(const Ice& other_Ice)
 	// std::cout << "Ice: copy assignement operator overloading called" << std::endl;
 	if (this != &other_Ice)
 	{
-		this->type = other_Ice.type;
+		
 	}
 	return *this;
 }

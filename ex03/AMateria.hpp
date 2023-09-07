@@ -6,7 +6,7 @@
 /*   By: rrhnizar <rrhnizar@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/29 18:49:23 by rrhnizar          #+#    #+#             */
-/*   Updated: 2023/09/05 13:26:36 by rrhnizar         ###   ########.fr       */
+/*   Updated: 2023/09/07 09:47:51 by rrhnizar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,6 @@ class AMateria
         AMateria(const AMateria& other_amateria);// copy constractor
         AMateria& operator=(const AMateria& other_amateria);//copy assignement operator overloading
         virtual ~AMateria();//destractor
-        
         
         std::string const & getType() const; //Returns the materia type
         virtual AMateria* clone() const = 0; // pure virtual function
