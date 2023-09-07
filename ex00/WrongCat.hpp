@@ -6,7 +6,7 @@
 /*   By: rrhnizar <rrhnizar@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/03 10:37:03 by rrhnizar          #+#    #+#             */
-/*   Updated: 2023/09/07 07:05:57 by rrhnizar         ###   ########.fr       */
+/*   Updated: 2023/09/07 08:58:21 by rrhnizar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,8 +25,6 @@ class WrongCat : public WrongAnimal
         ~WrongCat();// destractor 
         
         std::string getType() const;
-        void    setType(std::string typee);
-
         void    makeSound() const;
 };
 

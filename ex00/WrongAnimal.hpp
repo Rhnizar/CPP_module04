@@ -6,7 +6,7 @@
 /*   By: rrhnizar <rrhnizar@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/03 10:35:31 by rrhnizar          #+#    #+#             */
-/*   Updated: 2023/09/07 07:06:04 by rrhnizar         ###   ########.fr       */
+/*   Updated: 2023/09/07 08:58:10 by rrhnizar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,8 +27,6 @@ class WrongAnimal
         virtual ~WrongAnimal();//destractor
         
         std::string getType() const;
-        void    setType(std::string typee);
-        
         void    makeSound() const;
 };
 

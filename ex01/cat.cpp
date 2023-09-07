@@ -6,7 +6,7 @@
 /*   By: rrhnizar <rrhnizar@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/29 11:23:34 by rrhnizar          #+#    #+#             */
-/*   Updated: 2023/09/07 08:10:38 by rrhnizar         ###   ########.fr       */
+/*   Updated: 2023/09/07 08:54:48 by rrhnizar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,11 +53,6 @@ Cat::~Cat()
 std::string Cat::getType() const
 {
     return type;
-}
-
-void    Cat::setType(std::string typee)
-{
-    type = typee;
 }
 
 /*function to implement */

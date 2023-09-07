@@ -6,7 +6,7 @@
 /*   By: rrhnizar <rrhnizar@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/29 10:52:52 by rrhnizar          #+#    #+#             */
-/*   Updated: 2023/09/07 07:00:39 by rrhnizar         ###   ########.fr       */
+/*   Updated: 2023/09/07 08:57:30 by rrhnizar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,12 +48,6 @@ std::string Animal::getType() const
 {
     return type;
 }
-
-void    Animal::setType(std::string typee)
-{
-    type = typee;
-}
-
 
 /*function to implement */
 

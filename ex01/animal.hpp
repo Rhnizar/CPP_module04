@@ -6,7 +6,7 @@
 /*   By: rrhnizar <rrhnizar@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/29 10:37:14 by rrhnizar          #+#    #+#             */
-/*   Updated: 2023/09/07 07:14:30 by rrhnizar         ###   ########.fr       */
+/*   Updated: 2023/09/07 08:53:56 by rrhnizar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,8 +27,6 @@ class Animal
         virtual ~Animal();//destracter
         
         std::string getType() const;
-        void    setType(std::string typee);
-        
         virtual void    makeSound() const;
 };
 

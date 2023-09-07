@@ -6,7 +6,7 @@
 /*   By: rrhnizar <rrhnizar@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/29 11:21:21 by rrhnizar          #+#    #+#             */
-/*   Updated: 2023/09/07 08:02:52 by rrhnizar         ###   ########.fr       */
+/*   Updated: 2023/09/07 08:56:23 by rrhnizar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,11 +54,6 @@ Dog::~Dog()
 std::string Dog::getType() const
 {
     return type;
-}
-
-void    Dog::setType(std::string typee)
-{
-    type = typee;
 }
 
 /*function to implement */
