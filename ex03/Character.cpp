@@ -6,7 +6,7 @@
 /*   By: rrhnizar <rrhnizar@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/03 13:52:16 by rrhnizar          #+#    #+#             */
-/*   Updated: 2023/09/07 00:58:57 by rrhnizar         ###   ########.fr       */
+/*   Updated: 2023/09/07 01:32:47 by rrhnizar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 Character::Character()
 {
-	std::cout << "Character: default constractor called " << std::endl;
+	// std::cout << "Character: default constractor called " << std::endl;
 	for(int i=0; i<4; i++)
 		inventory[i] = NULL;
 	Name = "def_name";
@@ -23,7 +23,7 @@ Character::Character()
 
 Character::Character(std::string name)
 {
-	std::cout << "Character: constractor with parameters called " << std::endl;
+	// std::cout << "Character: constractor with parameters called " << std::endl;
 	Name = name;
 	for(int i=0; i<4; i++)
 		inventory[i] = NULL;
@@ -32,7 +32,7 @@ Character::Character(std::string name)
 
 Character::Character(const Character& other_character)
 {
-	std::cout << "ICharacter: copy constractor called " << std::endl;
+	// std::cout << "ICharacter: copy constractor called " << std::endl;
 	for (int i=0; i<4; i++)
 		this->inventory[i] = NULL;
 	*this = other_character;
@@ -40,7 +40,7 @@ Character::Character(const Character& other_character)
 
 Character& Character::operator=(const Character& other_character)
 {
-	std::cout << "ICharacter: copy assignement operator overloading called  " << std::endl;
+	// std::cout << "ICharacter: copy assignement operator overloading called  " << std::endl;
 	if (this != &other_character)
 	{
 		this->Name = other_character.Name;
@@ -64,7 +64,7 @@ Character& Character::operator=(const Character& other_character)
 
 Character::~Character()
 {
-	std::cout << "Character: destractor called " << std::endl;
+	// std::cout << "Character: destractor called " << std::endl;
 	deleteMateriaPointers(materias);
 	for (int i=0; i<4; i++)
 	{

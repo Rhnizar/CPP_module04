@@ -6,7 +6,7 @@
 /*   By: rrhnizar <rrhnizar@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/29 19:51:37 by rrhnizar          #+#    #+#             */
-/*   Updated: 2023/09/06 23:35:38 by rrhnizar         ###   ########.fr       */
+/*   Updated: 2023/09/07 01:31:41 by rrhnizar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,19 +14,19 @@
 
 Ice::Ice() : AMateria()
 {
-	std::cout << "Ice: default constractor called" << std::endl;
+	// std::cout << "Ice: default constractor called" << std::endl;
 	type = "ice";
 }
 
 Ice::Ice(const Ice& other_Ice) : AMateria(other_Ice)
 {
-	std::cout << "Ice: copy constractot called" << std::endl;
+	// std::cout << "Ice: copy constractot called" << std::endl;
 	*this = other_Ice;
 }
 
 Ice& Ice::operator=(const Ice& other_Ice)
 {
-	std::cout << "Ice: copy assignement operator overloading called" << std::endl;
+	// std::cout << "Ice: copy assignement operator overloading called" << std::endl;
 	if (this != &other_Ice)
 	{
 		this->type = other_Ice.type;
@@ -36,7 +36,7 @@ Ice& Ice::operator=(const Ice& other_Ice)
 
 Ice::~Ice()
 {
-	std::cout << "Ice: destractor called" << std::endl;
+	// std::cout << "Ice: destractor called" << std::endl;
 }
 
 /*function to implement */

@@ -6,7 +6,7 @@
 /*   By: rrhnizar <rrhnizar@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/03 19:19:56 by rrhnizar          #+#    #+#             */
-/*   Updated: 2023/09/07 00:59:15 by rrhnizar         ###   ########.fr       */
+/*   Updated: 2023/09/07 01:30:41 by rrhnizar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,20 +14,20 @@
 
 MateriaSource::MateriaSource()
 {
-	std::cout << "MateriaSource : default constractor called " << std::endl;
+	// std::cout << "MateriaSource : default constractor called " << std::endl;
 	for(int i=0; i<4; i++)
 		materias[i] = NULL;
 }
 
 MateriaSource::MateriaSource(const MateriaSource& other_MateriaSource)
 {
-	std::cout << "MateriaSource: copy constractor called " << std::endl;
+	// std::cout << "MateriaSource: copy constractor called " << std::endl;
 	*this = other_MateriaSource;
 }
 
 MateriaSource& MateriaSource::operator=(const MateriaSource& other_MateriaSource)
 {
-	std::cout << "MateriaSource: copy assignement operator overloading called " << std::endl;
+	// std::cout << "MateriaSource: copy assignement operator overloading called " << std::endl;
 	if (this != &other_MateriaSource)
 	{
 		for(int i=0; i<4; i++)
@@ -38,7 +38,7 @@ MateriaSource& MateriaSource::operator=(const MateriaSource& other_MateriaSource
 
 MateriaSource::~MateriaSource()
 {
-	std::cout << "MateriaSource: destractor called " << std::endl;
+	// std::cout << "MateriaSource: destractor called " << std::endl;
 	for(int i=0; i<4; i++)
 	{
 		if (materias[i])
